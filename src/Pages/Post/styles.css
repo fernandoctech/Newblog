@@ -1,0 +1,10 @@
+@import "~github-markdown-css";
+*{
+    margin: 0 auto;
+}
+.markdown-body{
+    width: 50%;
+    justify-content: center;
+    text-align: justify;
+    margin-top: 50px;
+}
