@@ -1,0 +1,34 @@
+.container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.destak-title{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    z-index: 1;
+
+}
+.destak-title h1{
+    margin-right: -75px;
+    font-size: 45pt;
+    z-index: 1;
+    color: gray;
+    margin-bottom: 120px;
+    text-align: center;
+}
+.destak-title a{
+    color: gray;
+    text-decoration: none;
+}
+.destak-title p{
+    align-self: flex-end;
+    color: gray;
+}
+.destak-img img{
+    width: 400px;
+}
+.destak-img{
+    margin: 0;
+}

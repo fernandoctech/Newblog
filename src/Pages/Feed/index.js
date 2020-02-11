@@ -21,18 +21,16 @@ export default class Feed extends Component{
     ){
         return(
             <div className="Feed">
-               {this.state.posts.map(post=>(
-                   <article key={post.id}>
-                        <div className="card">
-                          <div className="card-header">
-                            <h1>{post.title}</h1>
-                          </div>
-                          <div className="card-body">
-                          <Link to={`/Post/${post.id}`} >Acessar</Link>
-                          </div>
-                        </div>
-                   </article>
-               ))}
+              <div className="container">
+                <div className="destak-title">
+                    <h1><a href="#">NodeJs e Suas <br/> Riquesas</a> </h1><br/>
+                    
+                </div>
+                <div className="destak-img">
+                  <img src="https://i.ibb.co/RzxcCGw/Black-Circle-with-Utensils-Restaurant-Logo-1.png" />
+                </div>
+              </div>
+               
             </div>
         );
     }
