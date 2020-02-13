@@ -32,3 +32,109 @@
 .destak-img{
     margin: 0;
 }
+.container-post{
+    width: 85%;
+}
+.post-feed{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: -70px ;
+
+}
+.card-post{
+    border-radius: 20px;
+    padding: 20px;
+    
+    
+}
+article a{
+    color: black;
+    
+    
+}
+
+.card-post img{
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: black 0.3px 1px 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    height: 100%;
+    
+
+}
+.card-post img:hover{
+    
+    filter: blur(2px);
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    }
+.text-overlay {
+	position: absolute;
+	padding: 10px 12px;
+	overflow: hidden;
+	transition: all 300ms ease-in-out 0.1s;
+    cursor: pointer;
+    margin-top: -120px;
+    background-color: rgba(255, 243, 243, 0.692);
+    width: 326px;
+    height: 97px;
+    border-radius: 20px;
+	
+}
+.text-overlay:hover{
+    margin-top: -20%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1401px) {
+    .post-feed{
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr ;
+        margin-top: 0px;
+    }
+    .card-post img{
+        width: 300px;
+    }
+  }
+  @media screen and (m-width:122px){
+    .post-feed{
+        grid-template-columns: 1fr 1fr  ;
+        grid-template-rows: 1fr 1fr ;
+        margin-top: 0px;
+    }
+    .card-post img{
+        width: 360px;
+    }
+  }
+  @media screen and (max-width: 826px) {
+      .destak{
+          display: block;
+          margin: 0 auto;
+         
+      }
+      .destak h1{
+          margin: 0 auto;
+      }
+      .destak-img{
+        display: flex;
+          margin: 0 auto;
+          justify-content: center;
+          width: 100%;
+         
+      }
+      .post-feed{
+          grid-template-columns: 1fr;
+      }
+      .container-post{
+          width: 100%;
+      }
+      .card-post img{
+          width: 100%;
+      }
+      
+  }
