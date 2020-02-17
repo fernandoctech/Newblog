@@ -6,30 +6,53 @@ import {Link} from 'react-router-dom';
 export default class Feed extends Component{
     state = {
         posts:[],
+        destaks:[],
     
       }
       componentDidMount(){
         this.loadPosts();
+        this.loadDestak();
       };
       loadPosts = async () => {
-        const response = await api.get(`/feed`);
+        const response = await api.get(`/feeds`);
     
         this.setState({ posts: response.data })
         console.log(response);
+        
       };
+      loadDestak = async () => {
+        const response = await api.get(`/destak?_expand=feeds`);
+
+        this.setState ({ destaks: response.data })
+        console.log(response);
+      }
     render( 
     ){
         return(
             <div className="Feed">
-              <div className="container destak">
-                <div className="destak-title">
-                    <h1><a href="#">NodeJs e Suas <br/> Riquezas</a></h1><br/>
-                    
+              
+              {this.state.destaks.map(destak => (
+                <article key={destak.feedsId}>
+                  <div className="container destak">
+                   <div className="destak-title">
+                 
+                     
+                    <h1><Link to={`/Post/${destak.feedsId}`}>{destak.feeds.title}</Link></h1><br/>
+                    </div>
+                 <div className="destak-img">
+                  <img src={destak.feeds.img} /> 
                 </div>
-                <div className="destak-img">
-                  <img src="https://i.ibb.co/RzxcCGw/Black-Circle-with-Utensils-Restaurant-Logo-1.png" />
+
+                
                 </div>
-              </div>
+                </article>
+               
+                  ))}
+
+                
+                
+
+              
               
               <div className="container-post">
                 <div className="post-feed">

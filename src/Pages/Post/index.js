@@ -12,7 +12,7 @@ export default class Post extends Component{
         
       };
       fetchData() {
-        return this.fetchGistMarkdownUrl(this.state.post.id)
+        return this.fetchGistMarkdownUrl(this.state.post.gist)
           .then(this.fetchGistMarkdownText)
           .then(this.fetchRenderedMarkdown);
       }
@@ -39,7 +39,7 @@ export default class Post extends Component{
     
       async componentDidMount() {
         const { id } = this.props.match.params;
-        const response = await api.get(`/feed/${id}`);
+        const response = await api.get(`/feeds/${id}`);
     
         this.setState({ post: response.data , list: response.data});
         console.log(response);

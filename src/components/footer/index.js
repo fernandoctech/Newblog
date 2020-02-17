@@ -5,7 +5,12 @@ export default class Footer extends Component{
     render() {
         return(
             <div className='footer'>
+                <div className="sociais">
                 
+                </div>
+                <div className="coorp">
+
+                </div>
             </div>
         );
     }
