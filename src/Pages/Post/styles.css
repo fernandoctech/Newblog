@@ -3,13 +3,9 @@
     margin: 0 auto;
 }
 .markdown-body{
-    width: 50%;
+    width: 90%;
     justify-content: center;
     text-align: justify;
     margin-top: 50px;
 }
-@media screen and (min-width: 1401px) {
-    .markdown-body{
-        width: 100%;
-    }
-}
+
